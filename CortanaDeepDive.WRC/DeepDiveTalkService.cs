@@ -52,7 +52,7 @@ namespace CortanaDeepDive.WRC
 							case "ccd001ReadOutLoud":
 								var targetFileKey = "targetFile";
 								string targetFile = null;
-								if(voiceCommand.SpeechRecognitionResult != null 
+								if (voiceCommand.SpeechRecognitionResult != null
 									&& voiceCommand.SpeechRecognitionResult.SemanticInterpretation != null
 									&& voiceCommand.SpeechRecognitionResult.SemanticInterpretation.Properties != null
 									&& voiceCommand.SpeechRecognitionResult.SemanticInterpretation.Properties.Keys.Contains(targetFileKey))
@@ -126,9 +126,24 @@ namespace CortanaDeepDive.WRC
 				? await StorageFolder.GetFolderFromPathAsync(@"D:\Cortana")
 				: await KnownFolders.DocumentsLibrary.GetFolderAsync("Cortana");
 
+			var fileExtension = string.Empty;
+			var parsedFileName = string.Empty;
+
+			if (!string.IsNullOrWhiteSpace(fileName))
+			{
+				fileExtension = !fileName.EndsWith(".txt")
+					? ".txt"
+					: string.Empty;
+
+				parsedFileName = string.Format("{0}{1}", fileName.Replace(" ", ""), fileExtension);
+			}
+
 			// here we're specifying the file name for the demo's sake...
 			// ... you can actually grab this from the voice command
-			var targetFile = string.IsNullOrWhiteSpace(fileName) ? "test.txt" : string.Format("{0}{1}", fileName, !fileName.EndsWith(".txt") ? ".txt" : string.Empty);
+			var targetFile = string.IsNullOrWhiteSpace(parsedFileName)
+				? "test.txt"
+				: parsedFileName;
+
 			var file = await folder.GetFileAsync(targetFile);
 
 			using (var fileStream = (await file.OpenReadAsync()).GetInputStreamAt(0))

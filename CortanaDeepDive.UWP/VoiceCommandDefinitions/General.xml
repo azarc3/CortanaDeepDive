@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+	<CommandSet Name="CortanaDeepDive001_en-us" xml:lang="en-us">
+		<AppName> your extensions </AppName>
+		<Example> Read the file out loud using your extensions </Example>
+
+		<Command Name="ccd001ReadOutLoud">
+			<Example> read the file out loud using your extensions </Example>
+			<ListenFor RequireAppName="BeforeOrAfterPhrase"> read out loud </ListenFor>
+			<ListenFor RequireAppName="BeforeOrAfterPhrase"> read {targetFile} out loud [please] </ListenFor>
+			<Feedback>One moment please...</Feedback>
+			<VoiceCommandService Target="DeepDiveTalkService" />
+		</Command>
+
+		<PhraseTopic Label="targetFile" Scenario="Natural Language" />
+	</CommandSet>
+</VoiceCommands>

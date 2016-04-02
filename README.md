@@ -15,3 +15,10 @@ This simple demo was in response to a question on Quora.com (https://www.quora.c
 9. Wait a about three to make sure the load completes... but then you can exit the app.
 
 Once you've done that you should be good to go!
+
+Ask Cortana to *read out loud using your extensions*. 
+
+See if you can figure out how to use the other phrase that works too. 
+(Hint: it's in the CortanaDeepDive.UWP/VoiceCommandDefinitions/General.xml file)
+
+-- Happy Coding!

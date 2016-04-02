@@ -16,7 +16,7 @@ This simple demo was in response to a question on Quora.com (https://www.quora.c
 
 Once you've done that you should be good to go!
 
-Ask Cortana to #*"read out loud using your extensions"*#. 
+Ask Cortana to *"read out loud using your extensions"*. 
 
 See if you can figure out how to use the other phrase that works too. 
 (Hint: it's in the CortanaDeepDive.UWP/VoiceCommandDefinitions/General.xml file)

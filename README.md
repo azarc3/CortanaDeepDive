@@ -1,7 +1,10 @@
-# CortanaDeepDive
-The content for presentation at Code Camp in 2016.
+# Cortana Deep Dive
+This simple demo was in response to [a question on Quora.com](https://www.quora.com/On-Windows-10-PC-Is-there-a-way-to-ask-or-otherwise-direct-Cortana-to-read-from-a-text-document-or-other-similar-file/answer/Kelvin-McDaniel) where the OP wanted to know if Cortana could open and read an arbitrary file on the user's device.
 
-This simple demo was in response to a question on Quora.com (https://www.quora.com/On-Windows-10-PC-Is-there-a-way-to-ask-or-otherwise-direct-Cortana-to-read-from-a-text-document-or-other-similar-file/answer/Kelvin-McDaniel) where the OP wanted to know if Cortana could open and read an arbitrary file on the user's device.
+
+# SPECIAL THANKS
+To the folks at Orlando Code Camp 2016 who sat through the infamous 24 minutes of technical difficulties where the facility's projector refused to work... I appreciate your patience. Hopefully this repository will make up a bit for the waste of your time.  :)
+
 
 # Requirements:
 1. **Before you build**: Using the solution Configuration Manager, verify that **Build** and **Deploy** are checked for the .UWP project.

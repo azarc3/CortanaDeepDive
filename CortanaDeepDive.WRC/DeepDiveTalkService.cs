@@ -118,11 +118,9 @@ namespace CortanaDeepDive.WRC
 
 			// this sets which folder to look for; 
 			//     ... on Mobile it's the SD Card
-			//     ... on "Desktop" it's the logged in user's Documents folder
+			//     ... on "Desktop" it's where ever you specify... but we'll leave it at D: drive for now
 			//     ... and we're diving into a folder called "Cortana"
-			var folder = ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar")
-				? await StorageFolder.GetFolderFromPathAsync(@"D:\Cortana")
-				: await KnownFolders.DocumentsLibrary.GetFolderAsync("Cortana");
+			var folder = await StorageFolder.GetFolderFromPathAsync(@"D:\Cortana");
 
 			var fileExtension = string.Empty;
 			var parsedFileName = string.Empty;
@@ -172,7 +170,6 @@ namespace CortanaDeepDive.WRC
 			// set deferral
 			SetDeferralCompleted();
 		}
-
 
 		private void VoiceCommandCompleted(VoiceCommandServiceConnection sender, VoiceCommandCompletedEventArgs args)
 		{

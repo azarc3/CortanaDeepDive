@@ -10,7 +10,7 @@ To the folks at Orlando Code Camp 2016 who sat through the infamous 24 minutes o
 1. **Before you build**: Using the solution Configuration Manager, verify that **Build** and **Deploy** are checked for the .UWP project.
 2. You'll need to **Build** and **Deploy** the app to whatever target you want to run it on (Desktop, Tablet, Mobile, etc).
 3. Of course Cortana will need to be enabled and turned on for it to work.  :)
-4. For Desktop/Laptop/Tablet: Create a folder called **Cortana** in your **Documents library** (File Explorer > Documents > Cortana).
+4. For Desktop/Laptop/Tablet: Create a folder called **Cortana** on your **D: drive** (D:\Cortana).
 5. For Mobile: make sure an SD Card is present and create a folder on the root of the card called **Cortana**. The path should resolve to **D:\Cortana**.
 6. In the **Cortana** folder (that you created in 4 or 5) add a text file called **test.txt**.
 7. In the **test.txt** file, add some content... but no more than ** *256 characters, total* ** (includding punctuation and spaces -- I know, that sucks, but that's Microsoft's doing, not mine).

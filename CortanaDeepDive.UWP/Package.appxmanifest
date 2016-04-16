@@ -38,7 +38,6 @@
   <Capabilities>
     <Capability Name="internetClient" />
     <uap:Capability Name="removableStorage" />
-    <uap:Capability Name="documentsLibrary" />
     <DeviceCapability Name="location" />
   </Capabilities>
 </Package>
